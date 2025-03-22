@@ -1,0 +1,164 @@
+/* home.css */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(45deg, rgba(25,25,25,0.9), rgba(40,40,40,0.9)),
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+}
+
+.title-line {
+    display: block;
+    animation: textReveal 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.explore-btn, .contact-btn {
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.explore-btn {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contact-btn {
+    background: #1a1a1a;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.explore-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.contact-btn:hover {
+    background: #2a2a2a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chevron {
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-width: 2px 2px 0 0;
+    transform: rotate(135deg);
+    opacity: 0;
+    animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+    0% {
+        opacity: 0;
+        transform: rotate(135deg) translateY(10px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(135deg) translateY(-10px);
+    }
+}
+
+.chevron:nth-child(1) { animation-delay: 0s }
+.chevron:nth-child(2) { animation-delay: 0.2s }
+.chevron:nth-child(3) { animation-delay: 0.4s }
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem auto 0;
+    }
+    
+    .explore-btn, .contact-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

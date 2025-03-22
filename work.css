@@ -1,0 +1,173 @@
+/* Base Styles */
+.work-gallery {
+    padding: 6rem 2rem;
+    background: #fafafa;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #1a1a1a;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Project Preview */
+.project-preview {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44,62,80,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .preview-overlay {
+    opacity: 1;
+}
+
+.live-preview-btn {
+    background: #3498db;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.live-preview-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Project Content */
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.code-preview {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+pre[class*="language-"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+}
+
+/* Project Actions */
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.view-code {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.view-code:hover {
+    background: #3498db;
+    transform: translateY(-2px);
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tech-stack span {
+    background: rgba(52,152,219,0.1);
+    color: #3498db;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-gallery {
+        padding: 4rem 1rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-preview {
+        height: 200px;
+    }
+}

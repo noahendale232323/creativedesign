@@ -1,0 +1,248 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fafafa;
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1a1a1a;
+}
+
+.cta-button {
+    background: #1a1a1a;
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Creator Section */
+.creator-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 2rem;
+    background: linear-gradient(45deg, rgba(44,62,80,0.95), rgba(52,152,219,0.95)),
+                url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+    background-size: cover;
+    background-position: center;
+}
+
+.creator-card {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem;
+}
+
+.creator-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border: 3px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.avatar-glow {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    z-index: 1;
+    animation: glow-pulse 3s ease infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+}
+
+.creator-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.creator-title {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+}
+
+.contact-section {
+    background: rgba(44,62,80,0.05);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+}
+
+.telegram-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    color: #3498db;
+    font-size: 1.5rem;
+}
+
+.username {
+    color: #2c3e50;
+    font-family: monospace;
+    font-size: 1rem;
+    background: rgba(52,152,219,0.1);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+}
+
+.contact-button {
+    background: #2c3e50;
+    color: white;
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.contact-button:hover {
+    background: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52,152,219,0.3);
+}
+
+.button-icon {
+    transition: transform 0.3s ease;
+}
+
+.contact-button:hover .button-icon {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .creator-card {
+        padding: 2rem;
+    }
+    
+    .creator-name {
+        font-size: 2rem;
+    }
+    
+    .contact-section {
+        padding: 1.5rem;
+    }
+    
+    .username {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .creator-card {
+        padding: 1.5rem;
+    }
+    
+    .avatar-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+}
