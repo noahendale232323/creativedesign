@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Creative Studio</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">CreativeStudio</h1>
+            </a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="work.html" class="active">Work</a>
+                <a href="about.html">About</a>
+                <a href="creator.html" class="cta-button">Contact</a>
+            </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+    </nav>
+
+    <section class="work-gallery">
+        <div class="section-container">
+            <h2 class="section-title">Code Masterpieces</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-preview" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c')">
+                        <div class="preview-overlay">
+                            <a href="#" class="live-preview-btn">
+                                <i class="fas fa-eye"></i>
+                                Live Preview
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Interactive Portfolio</h3>
+                        <div class="code-preview">
+                            <pre><code class="language-html">&lt;div class="portfolio"&gt;
+    &lt;h1&gt;Creative Works&lt;/h1&gt;
+    &lt;div class="gallery"&gt;
+        &lt;!-- Amazing content --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="project-actions">
+                            <button class="view-code">
+                                <i class="fas fa-code"></i>
+                                View Code
+                            </button>
+                            <div class="tech-stack">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-preview" style="background-image: url('https://images.unsplash.com/photo-1526498460520-4c246339dccb')">
+                        <div class="preview-overlay">
+                            <a href="#" class="live-preview-btn">
+                                <i class="fas fa-eye"></i>
+                                Live Preview
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <div class="code-preview">
+                            <pre><code class="language-javascript">function initCart() {
+    const cart = new ShoppingCart();
+    cart.addProduct(product);
+    cart.calculateTotal();
+}</code></pre>
+                        </div>
+                        <div class="project-actions">
+                            <button class="view-code">
+                                <i class="fas fa-code"></i>
+                                View Code
+                            </button>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">© 2025 Creative Studio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="CodePen"><i class="fab fa-codepen"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>
